@@ -81,10 +81,21 @@ header.type {
     opacity: 0;
     height: 100px:
     width: 100px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(90deg, #7ce8ff, #00acdf);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 #yes:hover {
     transform: scale(1.2);
     transition: transform 0.3s ease;
+    background: linear-gradient(90deg, #00acdf, #7ce8ff);
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(255, 117, 140, 0.4);
 }
 @keyframes button {
     from {
@@ -93,4 +104,8 @@ header.type {
     to {
         opacity: 1;
     }
+}
+#yes:active {
+    transform: scale(1); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
