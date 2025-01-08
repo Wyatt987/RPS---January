@@ -8,13 +8,18 @@ const Choice = document.getElementById('Choice');
 showWebsite.addEventListener('click', () => {
     RPS.classList.remove('d-none');
     Choice.classList.remove('d-none');
-    storySection.scrollIntoView({ behavior: 'smooth' });
+    RPS.scrollIntoView({ behavior: 'smooth' });
 });
-function userChoice() {
-    User === "Rock"
+let user = document.getElementById('user');
+
+function userChoiceRock() {
+    user.innerHTML = "Rock"; 
+    console.log(user.innerHTML); 
 }
 
 
 
-document.getElementById('User').innerHTML = User
+
+
+
 
