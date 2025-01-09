@@ -110,12 +110,14 @@ body {
     background-color: grey;
 }
 /*Rock Image*/
-Button#rocky img {
+
+button#rocky img, button#Papery img, button#Scissory img {
     border-radius: 25px;
     height: 50vh;
-    width: 50vh:
+    width: 50vh;
 }
-Button#rocky {
+
+button#rocky, button#Papery, button#Scissory {
     border-radius: 25px;
     height: 50vh;
     width: 50vh;
@@ -123,12 +125,11 @@ Button#rocky {
     border: none;
 }
 
-#rocky:hover {
+button#rocky:hover, button#Papery:hover, button#Scissory:hover {
     transform: scale(1.2);
     transition: transform 0.3s ease;
-    transform: scale(1.1);
 }
-#rocky:active {
+button#rocky:active, button#Papery:active, button#Scissory:active {
     transform: scale(1); 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
