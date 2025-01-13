@@ -11,28 +11,7 @@ showWebsite.addEventListener('click', () => {
     RPS.scrollIntoView({ behavior: 'smooth' });
 });
 
-//User Choice//
-let user = document.getElementById('user');
-document.getElementById('rocky').addEventListener('click', userChoice);
-document.getElementById('Papery').addEventListener('click', userChoice);
-document.getElementById('Scissory').addEventListener('click', userChoice);
 
-function userChoice(event) {
-    let clickedButtonId = event.target.parentElement.id; 
-
-    if (clickedButtonId === 'rocky') {
-        user.textContent = "Rock";
-        console.log("Rock");
-    } else if (clickedButtonId === 'Papery') {
-        user.textContent = "Paper";
-        console.log("Paper");
-    } else if (clickedButtonId === 'Scissory') {
-        user.textContent = "Scissors";
-        console.log("Scissors");
-    } else {
-        console.log("Invalid choice");
-    }
-}
 //ComputerChoice//
 function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
@@ -48,7 +27,35 @@ function getComputerChoice() {
     document.getElementById('CC').innerHTML = computerChoice;
 }
 
+const determineWinner = (userChoice, computerChoice) => {
+    if (userChoice === 'bomb') {
+      return "You won with the secret weapon!";
+    }
+  
+    if (userChoice === computerChoice) {
+      return "It's a tie!";
+    }
+  
+    if (userChoice === 'rock') {
+      return computerChoice === 'paper' ? 'The computer won!' : 'You won!';
+    }
+  
+    if (userChoice === 'paper') {
+      return computerChoice === 'scissors' ? 'The computer won!' : 'You won!';
+    }
+  
+    if (userChoice === 'scissors') {
+      return computerChoice === 'rock' ? 'The computer won!' : 'You won!';
+    }
+  };
 
-
+const playGame = (userChoice) => {
+     
+    const computerChoice = getComputerChoice();
+    console.log('You threw: ' + userChoice);
+    console.log('The computer threw: ' + computerChoice);
+  
+    console.log(determineWinner(userChoice, computerChoice));
+  };
 
 
