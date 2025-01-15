@@ -8,6 +8,7 @@ const Choice = document.getElementById('Choice');
 showWebsite.addEventListener('click', () => {
     RPS.classList.remove('d-none');
     Choice.classList.remove('d-none');
+    Results.classList.remove('d-none');
     RPS.scrollIntoView({ behavior: 'smooth' });
 });
 
@@ -17,11 +18,11 @@ function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
     switch (randomNumber) {
         case 0:
-            return 'rock';
+            return 'Rock';
         case 1:
-            return 'paper';
+            return 'Paper';
         case 2:
-            return 'scissors';
+            return 'Scissors';
     }
     const computerChoice = getComputerChoice();
     document.getElementById('CC').innerHTML = computerChoice;
@@ -35,17 +36,16 @@ const determineWinner = (userChoice, computerChoice) => {
     if (userChoice === computerChoice) {
       return "It's a tie!";
     }
-  
-    if (userChoice === 'rock') {
-      return computerChoice === 'paper' ? 'The computer won!' : 'You won!';
+    if (userChoice === 'Rocky') {
+      return computerChoice === 'Paper' ? 'The computer won!' : 'You won!';
     }
   
-    if (userChoice === 'paper') {
-      return computerChoice === 'scissors' ? 'The computer won!' : 'You won!';
+    if (userChoice === 'Papery') {
+      return computerChoice === 'Scissors' ? 'The computer won!' : 'You won!';
     }
   
-    if (userChoice === 'scissors') {
-      return computerChoice === 'rock' ? 'The computer won!' : 'You won!';
+    if (userChoice === 'Scissory') {
+      return computerChoice === 'Rock' ? 'The computer won!' : 'You won!';
     }
   };
 
@@ -56,6 +56,9 @@ const playGame = (userChoice) => {
     console.log('The computer threw: ' + computerChoice);
   
     console.log(determineWinner(userChoice, computerChoice));
+    document.getElementById('CC').innerHTML = computerChoice;
+    document.getElementById('user').innerHTML = userChoice;
+    document.getElementById('WorL').innerHTML = determineWinner(userChoice, computerChoice);
   };
 
 

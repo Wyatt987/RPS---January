@@ -20,7 +20,7 @@
     </head>
 
     <body>
-        <header id="row" class="type">
+        <header class="type">
             <div class="row mt-5 ms-5 me-5 text-light">
                 <div class="col-5">
                     <h1 class="mt-5" id="Game">Lets Play a Game!</h1>
@@ -41,13 +41,18 @@
                 <div class="col-6 d-flex justify-content-center"><h1>Computer:<p id="CC" class="fs-3"></p>
                 </div>
             </div>
-            <div class="row d-none mtb-5" id="RPS">
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-2 d-flex justify-content-center"><button  onclick="playGame('rocky')" id="rocky"><img src="imgs/rock.jpg"></button>
+            <div class="row d-none my-5" id="RPS">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-2 d-flex justify-content-center"><button onclick="playGame('Rocky')" id="Rocky"><img src="imgs/rock.jpg"></button>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-2 d-flex justify-content-center"><button id="Papery"><img src="imgs/paper.avif"></button>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-2 d-flex justify-content-center"><button  onclick="playGame('Papery')" id="Papery"><img src="imgs/paper.avif"></button>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mtb-2 d-flex justify-content-center"><button  id="Scissory"><img src="imgs/Scissor.jpg"></button>
+                <div class="col-lg-4 col-md-6 col-sm-12 mtb-2 d-flex justify-content-center"><button  onclick="playGame('Scissory')" id="Scissory"><img src="imgs/Scissor.jpg"></button>
                 </div>
+            </div>
+            <div class="row bg-light opacity-50 mx-5 d-none fs-1" id="Results">
+                <div class="col-3"></div>
+                <div class="col-6 d-flex justify-content-center" id="WorL"></div>
+                <div class="col-3"></div>
             </div>
         </main>
         <footer>

@@ -28,8 +28,7 @@ header.type {
     animation-fill-mode: forwards;
     animation-delay: 2s;
     opacity: 0;
-    
-
+    background-image: url(imgs/cloud.jpg);
 }
 @keyframes ROCK {
     from {
@@ -111,13 +110,13 @@ body {
 }
 /*Rock Image*/
 
-button#rocky img, button#Papery img, button#Scissory img {
+button#Rocky img, button#Papery img, button#Scissory img {
     border-radius: 25px;
     height: 50vh;
     width: 50vh;
 }
 
-button#rocky, button#Papery, button#Scissory {
+button#Rocky, button#Papery, button#Scissory {
     border-radius: 25px;
     height: 50vh;
     width: 50vh;
@@ -125,11 +124,18 @@ button#rocky, button#Papery, button#Scissory {
     border: none;
 }
 
-button#rocky:hover, button#Papery:hover, button#Scissory:hover {
+button#Rocky:hover, button#Papery:hover, button#Scissory:hover {
     transform: scale(1.2);
     transition: transform 0.3s ease;
 }
-button#rocky:active, button#Papery:active, button#Scissory:active {
+button#Rocky:active, button#Papery:active, button#Scissory:active {
     transform: scale(1); 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
+/* results*/
+#Results {
+    border-radius: 25px;
+    height: 10vh;
+}
+
+
