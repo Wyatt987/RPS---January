@@ -21,20 +21,33 @@
 
     <body>
         <header class="type">
-            <div class="row mt-5 ms-5 me-5 text-light">
-                <div class="col-5">
-                    <h1 class="mt-5" id="Game">Lets Play a Game!</h1>
+            <div class="row mt-5 ms-5 me-5">
+                <div class="col-5" id="cloud">
+                    <h5 class="my-5 d-flex justify-content-center" id="Game">Lets Play a Game!</h5>
                 </div>
                 <div class="col-1"></div>
-                <div class="col-2 mt-5"> <h1 id="ROCK">ROCK</h1></div>
-                <div class="col-2 mt-5"><h1 id="PAPER">PAPER</h1></div>
-                <div class="col-2 mt-5"><h1 id="SCISSORS">SCISSORS</h1></div>
+                <div class="col-2 d-flex justify-content-center" id="cloud"> <h5 class="mt-5" id="ROCK">ROCK</h5></div>
+                <div class="col-2 d-flex justify-content-center" id="cloud"><h5 class="mt-5" id="PAPER">PAPER</h5></div>
+                <div class="col-2 d-flex justify-content-center" id="cloud"><h5 class="mt-5" id="SCISSORS">SCISSORS</h5></div>
             </div>
-            <div class="row">
-                <div class="col-12 d-flex justify-content-center mt-5"><button id="yes"><h1 class="text-light">Let's Get Started</h1></button></div>
+            <form id="form" class="mb-5 shadow-lg p-4 rounded">
+                <div class="row">
+                    <div class="col-3"></div>
+                <div class="mb-3 mx-5 col-6">
+                    <label for="firstName" class="form-label fs-1"><b>First Name</b></label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+                </div>
+                <div class="col-3"></div>
             </div>
+        </form>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center mt-5"><button id="yes"><h1 class="text-light">Let's Get Started</h1></button></div>
+        </div>
         </header>
         <main>
+            <div class="row d-none mt-5" id="Replace">
+                <div class="col-12 d-flex justify-content-center"><h1 id="greeting">
+                </div>
             <div class="row d-none mt-5" id="Choice">
                 <div class="col-6 d-flex justify-content-center"><h1>User:<p id="user" class="fs-3"></p>
                 </div>

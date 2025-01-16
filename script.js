@@ -10,6 +10,11 @@ showWebsite.addEventListener('click', () => {
     Choice.classList.remove('d-none');
     Results.classList.remove('d-none');
     RPS.scrollIntoView({ behavior: 'smooth' });
+    form.classList.add('d-none');
+    replace.classlist.remove('d-none'):
+});
+document.getElementById('yes').addEventListener('click', function () {
+  document.getElementById('form').submit();
 });
 
 
@@ -48,7 +53,7 @@ const determineWinner = (userChoice, computerChoice) => {
       return computerChoice === 'Rock' ? 'The computer won!' : 'You won!';
     }
   };
-
+//Code to run the game//
 const playGame = (userChoice) => {
      
     const computerChoice = getComputerChoice();
@@ -60,5 +65,9 @@ const playGame = (userChoice) => {
     document.getElementById('user').innerHTML = userChoice;
     document.getElementById('WorL').innerHTML = determineWinner(userChoice, computerChoice);
   };
+//Greeting//
 
+let userName = firstName
 
+userName ? greeting.innerText=`Hello, ${userName}!` 
+: greeting.innerText=`Hello Stranger!`
