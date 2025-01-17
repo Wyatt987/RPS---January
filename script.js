@@ -6,16 +6,22 @@ const Choice = document.getElementById('Choice');
 
 /*Reveal website*/
 showWebsite.addEventListener('click', () => {
-    RPS.classList.remove('d-none');
-    Choice.classList.remove('d-none');
-    Results.classList.remove('d-none');
-    RPS.scrollIntoView({ behavior: 'smooth' });
-    form.classList.add('d-none');
-    replace.classlist.remove('d-none'):
+  RPS.classList.remove('d-none');
+  Choice.classList.remove('d-none');
+  Results.classList.remove('d-none');
+  Replace.classList.remove('d-none');
+  form.classList.add('d-none');
+  showWebsite.classList.remove('d-none');
+  RPS.scrollIntoView({ behavior: 'smooth' });
 });
-document.getElementById('yes').addEventListener('click', function () {
-  document.getElementById('form').submit();
-});
+
+//Greeting//
+function userName() {
+  const firstNameValue = document.getElementById("firstName").value;
+  userName ? greeting.innerText=`Hello, ${firstNameValue}!` 
+  : greeting.innerText=`Hello Stranger!`
+}
+
 
 
 //ComputerChoice//
@@ -65,9 +71,4 @@ const playGame = (userChoice) => {
     document.getElementById('user').innerHTML = userChoice;
     document.getElementById('WorL').innerHTML = determineWinner(userChoice, computerChoice);
   };
-//Greeting//
 
-let userName = firstName
-
-userName ? greeting.innerText=`Hello, ${userName}!` 
-: greeting.innerText=`Hello Stranger!`
