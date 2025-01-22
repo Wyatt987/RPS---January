@@ -18,9 +18,10 @@ showWebsite.addEventListener('click', () => {
 //Greeting//
 function userName() {
   const firstNameValue = document.getElementById("firstName").value;
-  userName ? greeting.innerText=`Hello, ${firstNameValue}!` 
-  : greeting.innerText=`Hello Stranger!`
+  const greeting = document.getElementById("greeting");
+  greeting.innerText = firstNameValue ? `Hello, ${firstNameValue}!` : `Hello Stranger!`;
 }
+
 
 
 
@@ -40,25 +41,25 @@ function getComputerChoice() {
 }
 
 const determineWinner = (userChoice, computerChoice) => {
-    if (userChoice === 'bomb') {
-      return "You won with the secret weapon!";
-    }
-  
-    if (userChoice === computerChoice) {
-      return "It's a tie!";
-    }
-    if (userChoice === 'Rocky') {
-      return computerChoice === 'Paper' ? 'The computer won!' : 'You won!';
-    }
-  
-    if (userChoice === 'Papery') {
-      return computerChoice === 'Scissors' ? 'The computer won!' : 'You won!';
-    }
-  
-    if (userChoice === 'Scissory') {
-      return computerChoice === 'Rock' ? 'The computer won!' : 'You won!';
-    }
-  };
+  if (userChoice === 'Rocky' && computerChoice === 'Rock')
+    return "It's a tie!";
+  if (userChoice === 'Rocky' && computerChoice === 'Paper')
+    return "The Computer Won!";
+  if (userChoice === 'Rocky' && computerChoice === 'Scissors') 
+    return "You Won!";
+  if (userChoice === 'Scissory' && computerChoice === 'Scissory') 
+    return "It's a tie!";
+  if (userChoice === 'Scissory' && computerChoice === 'Rock')
+    return "The Computer Won!";
+  if (userChoice === 'Scissory' && computerChoice === 'Paper') 
+    return "You Won!";
+  if (userChoice === 'Papery' && computerChoice === 'Paper') 
+    return "It's a tie!";
+  if (userChoice === 'Papery' && computerChoice === 'Scissors')
+    return "The Computer Won!";
+  if (userChoice === 'Papery' && computerChoice === 'Rock') 
+    return "You Won!";
+  }
 //Code to run the game//
 const playGame = (userChoice) => {
      
