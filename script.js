@@ -88,7 +88,6 @@ const disableGame = () => {
 
     // Show the reset button and the reload button
     document.getElementById('resetButton').classList.remove("d-none");
-    document.getElementById('reloadPage').classList.remove("d-none");
 };
 
 // Reload page button
