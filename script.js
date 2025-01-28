@@ -14,6 +14,7 @@ showWebsite.addEventListener('click', () => {
     form.classList.add('d-none');
     showWebsite.classList.add('d-none');
     RPS.scrollIntoView({ behavior: 'smooth' });
+    reloadPage.classList.remove('d-none');
 });
 
 // Greeting
@@ -84,29 +85,20 @@ const disableGame = () => {
     document.getElementById('Rocky').disabled = true;
     document.getElementById('Papery').disabled = true;
     document.getElementById('Scissory').disabled = true;
-    document.getElementById('resetButton').classList.remove("d-none"); 
+
+    // Show the reset button and the reload button
+    document.getElementById('resetButton').classList.remove("d-none");
+    document.getElementById('reloadPage').classList.remove("d-none");
 };
 
-// Reset game
-const resetGame = () => {
-    userScore = 0;
-    computerScore = 0;
-    roundsPlayed = 0;
+// Reload page button
+document.getElementById('reloadPage').addEventListener('click', () => {
+    window.location.reload();
+});
 
-    document.getElementById('Rocky').disabled = false;
-    document.getElementById('Papery').disabled = false;
-    document.getElementById('Scissory').disabled = false;
-    document.getElementById('resetButton').classList.add("d-none"); 
-    
-    document.getElementById('userScore').innerText = `User: ${userScore}`;
-    document.getElementById('computerScore').innerText = `Computer: ${computerScore}`;
-    document.getElementById('WorL').innerText = "Start a New Round!";
-};
 
 // Event listeners for user choices
 document.getElementById('Rocky').addEventListener('click', () => playGame('Rocky'));
 document.getElementById('Papery').addEventListener('click', () => playGame('Papery'));
 document.getElementById('Scissory').addEventListener('click', () => playGame('Scissory'));
 
-// Reset button
-document.getElementById('resetButton').addEventListener('click', resetGame);

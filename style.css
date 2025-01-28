@@ -113,7 +113,7 @@ header.type {
 }
 body {
     background-image: url(imgs/bacgrkound.jpeg);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 /*Rock Paper Scissors images*/
 
