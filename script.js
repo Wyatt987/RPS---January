@@ -101,6 +101,3 @@ document.getElementById('Rocky').addEventListener('click', () => playGame('Rocky
 document.getElementById('Papery').addEventListener('click', () => playGame('Papery'));
 document.getElementById('Scissory').addEventListener('click', () => playGame('Scissory'));
 
-function userName() {
-    headerr.classList.add('d-none');
-}
